@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:smartcards/core/base/loading_state.dart';
 import 'package:smartcards/res/app_colors.dart';
 import 'package:smartcards/res/app_fonts.dart';
+import 'package:smartcards/res/app_images.dart';
 import 'package:smartcards/screens/login/login_notifier.dart';
 import 'package:smartcards/utils/common/widgets/common_buttons.dart';
 import 'package:smartcards/utils/common/widgets/common_textfield.dart';
@@ -43,17 +44,7 @@ class LoginScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.add_chart_rounded, size: 80, color: Colors.white,),
-                        10.verticalSpace,
-                        Text(
-                          'G42',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        Image.asset(AppImages.g42WhiteLogo, height: 100,),
                       ],
                     ),
                   ),

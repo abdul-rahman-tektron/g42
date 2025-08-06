@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:smartcards/res/app_colors.dart';
 import 'package:smartcards/res/app_theme.dart';
 import 'package:smartcards/screens/bottom_bar/bottom_bar_screen.dart';
 import 'package:smartcards/screens/login/login_screen.dart';
@@ -23,6 +24,10 @@ void main() async {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: AppColors.primaryColor, //or set color with: Color(0xFF0000FF)
+    ));
 
     // Initialize secure storage
     await SecureStorageHelper.init();
